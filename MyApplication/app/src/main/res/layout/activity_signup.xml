@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="32dp"
+    tools:context=".Signup">
+
+
+    <ImageButton
+        android:id="@+id/iconButton"
+        android:layout_width="90dp"
+        android:layout_height="102dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+
+        android:adjustViewBounds="true"
+
+        android:onClick="uploadImage"
+        android:scaleType="fitXY"
+
+        tools:srcCompat="@tools:sample/avatars"
+        android:background="@drawable/avataricon"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/iconButton"
+        android:ems="10"
+        android:hint="İsim"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/iconButton"
+        android:ems="10"
+        android:hint="Soyisim"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconButton"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp"
+        android:hint="Kullanıcı Adı"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Telefon"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="E-mail"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Şifreniz"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Tekrardan şifrenizi giriniz"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/signupButton_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/password2"
+        android:background="@android:color/holo_red_light"
+        android:text="KAYDOL"
+        android:onClick="signupListener"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

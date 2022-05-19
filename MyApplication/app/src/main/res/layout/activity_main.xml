@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="64dp"
+        android:paddingTop="64dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        tools:layout_editor_absoluteX="1dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/music_icon"
+            android:layout_centerHorizontal="true"
+           />
+        <EditText
+            android:id="@+id/usernameText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:inputType="textPersonName"
+            android:hint="Kullanıcı adınızı giriniz"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usernameText"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:ems="10"
+            android:hint="Şifrenizi giriniz"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@id/passwordText"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/holo_red_light"
+            android:text="GİRİŞ YAP"
+            android:onClick="login"/>
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_below="@id/loginButton"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="KAYDOL"
+            android:background="@android:color/holo_red_light"
+            android:layout_centerHorizontal="true"
+            android:onClick="signUp"/>/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

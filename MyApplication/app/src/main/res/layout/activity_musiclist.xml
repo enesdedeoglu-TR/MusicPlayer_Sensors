@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/music_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="Müzikler"
+
+        android:textAlignment="center"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notFound_Text"
+        android:text="Buralar çok sessiz"
+
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/music_recyclerview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/music_title"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

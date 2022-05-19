@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Player"
+    android:background="#EE5F96">
+
+    <ImageView
+        android:id="@+id/musicplayer_icon"
+        android:layout_width="401dp"
+        android:layout_height="360dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_playericon_adaptive_back"
+        android:foreground="@drawable/ic_playericon_adaptive_fore"></ImageView>
+
+    <TextView
+        android:id="@+id/playerTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/musicplayer_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Ali Kınık - Sabahlar Olmasın"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+
+        android:textStyle="bold|italic">
+
+    </TextView>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/playerTitle"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_playerplay"
+        android:onClick="playPauseButton"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/playerPlayButton">
+    </ImageButton>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/playerTitle"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_playerback"
+        android:layout_toLeftOf="@id/playerPlayButton"
+        android:layout_marginRight="60dp"
+        android:onClick="backButton"
+        android:layout_centerHorizontal="true"
+
+
+        android:id="@+id/playerBackButton">
+    </ImageButton>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/playerTitle"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_playernext"
+        android:layout_toRightOf="@id/playerPlayButton"
+        android:layout_marginLeft="60dp"
+        android:onClick="nextButton"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/playerNextButton">
+    </ImageButton>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerTime"
+        android:text="0:00"
+        android:textSize="15dp"
+        android:layout_below="@id/playerPlayButton"
+
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/playerBackButton"
+        >
+    </TextView>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/MySeekBar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerPlayButton"
+        android:layout_toRightOf="@id/playerTime"
+        android:layout_toLeftOf="@id/playerDuration"
+        android:paddingTop="20dp"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerDuration"
+        android:text="0:00"
+        android:textSize="15dp"
+        android:layout_below="@id/playerNextButton"
+        android:layout_alignRight="@id/playerNextButton"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+        >
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EE5F96"
+        android:layout_alignParentRight="true"
+        android:onClick="share"
+        app:srcCompat="@android:drawable/ic_menu_directions" />
+
+
+
+
+</RelativeLayout>
